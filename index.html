@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator - Sabari</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <button class="upload-button" id="uploadbutton">
+        <input type="file" id="imageInput" accept="image/*" onchange="setBackgroundImage(event)">
+    <label for="imageInput">Choose Image</label>
+      </button>
+      <div class="want-to-see-container">
+        <span>Want to see your Photo as a </span>
+        <b class="background2">Background?</b>
+      </div>
+    <div class="toggleBtn"></div>
+    <div class="Calculator">
+        <div class="buttons">
+          <h2 id="value"></h2>
+          <span id="clear">Clear</span>
+          <span id="divide">/</span>
+          <span id="multi">*</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span id="minus">-</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span id="plus">+</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>0</span>
+          <span>00</span>
+          <span>.</span>
+          <span id="equal">=</span>
+        </div>
+    </div>
+    <script>
+        let buttons = document.querySelector('.buttons');
+        let btn = document.querySelectorAll('span');
+        let value = document.getElementById('value');
+        let toggleBtn = document.querySelector('.toggleBtn');
+        let body = document.querySelector('body');
+
+        for(let i=0; i<btn.length; i++){
+            btn[i].addEventListener("click", function(){
+
+                if(this.innerHTML=="="){
+                    value.innerHTML = eval(value.innerHTML);
+                }else{
+                    if(this.innerHTML=="Clear"){
+                        value.innerHTML = "";
+                    }
+                    else{
+                        value.innerHTML += this.innerHTML;
+                    }
+                }
+            })
+        }
+
+        toggleBtn.onclick = function(){
+            body.classList.toggle('dark');
+        }
+    </script>
+    <script>
+        function setBackgroundImage(event) {
+            const fileInput = event.target;
+            const file = fileInput.files[0];
+  
+            if (file) {
+                const reader = new FileReader();
+  
+                reader.onload = function (e) {
+                    const imageUrl = e.target.result;
+                    document.body.style.backgroundImage = `url('${imageUrl}')`;
+                    document.body.style.backgroundSize = '1440px 900px';
+                };
+  
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>
