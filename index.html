@@ -74,7 +74,7 @@
                 reader.onload = function (e) {
                     const imageUrl = e.target.result;
                     document.body.style.backgroundImage = `url('${imageUrl}')`;
-                    document.body.style.backgroundSize = '1440px 900px';
+                    document.body.style.backgroundSize = '100%';
                 };
   
                 reader.readAsDataURL(file);
