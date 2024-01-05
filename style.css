@@ -184,12 +184,12 @@ body
   .background2 {
     color: var(--color-chartreuse);
   }
-  .textandupload
-  {
-    top: 387px;
-    left: 25px;
+  .textandupload {
+    position: absolute;
+    top: 300px;
+    left: 90px;
     display: inline-flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 14px;
   }
