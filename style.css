@@ -159,28 +159,37 @@ body
     -5px -5px 10px rgba(255,255,255,0.25);
 }
 .want-to-see-container {
-    position: absolute;
-    top: 387px;
-    left: 25px;
-    display: inline-block;
     width: 408px;
+    height: 84px;
+    color: #000;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.dark .want-to-see-container
+{
+    color: #edf1f4;
 }
 .upload-button {
+    display: inline-flex;
+    padding: 9px 17px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     border-radius: 15px;
     background: #61FF00;
-    cursor: pointer;
-    border: 0;
-    background-color: var(--color-chartreuse);
-    position: absolute;
-    top: 485px;
-    left: 95px;
-    border-radius: 15px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
   }
   .background2 {
     color: var(--color-chartreuse);
+  }
+  .textandupload
+  {
+    top: 387px;
+    left: 25px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
   }
