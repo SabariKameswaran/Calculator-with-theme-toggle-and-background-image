@@ -5,14 +5,16 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <button class="upload-button" id="uploadbutton">
-        <input type="file" id="imageInput" accept="image/*" onchange="setBackgroundImage(event)">
-    <label for="imageInput">Choose Image</label>
-      </button>
-      <div class="want-to-see-container">
-        <span>Want to see your Photo as a </span>
-        <b class="background2">Background?</b>
+    <div class="textandupload">
+          <div class="want-to-see-container">
+            <p>Want to see your Photo as a </p>
+            <b class="background2">Background?</b>
+            <button class="upload-button" id="uploadbutton">
+                <input type="file" id="imageInput" accept="image/*" onchange="setBackgroundImage(event)">
+            <label for="imageInput">Choose Image</label>
+            </button>
       </div>
+    </div>
     <div class="toggleBtn"></div>
     <div class="Calculator">
         <div class="buttons">
@@ -59,12 +61,9 @@
                 }
             })
         }
-
         toggleBtn.onclick = function(){
             body.classList.toggle('dark');
         }
-    </script>
-    <script>
         function setBackgroundImage(event) {
             const fileInput = event.target;
             const file = fileInput.files[0];
