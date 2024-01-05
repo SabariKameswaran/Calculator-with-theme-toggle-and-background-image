@@ -184,6 +184,232 @@ body
     gap: 10px;
     border-radius: 15px;
     background: #61FF00;
+    border-color: #000;
+  }
+  .dark .upload-button
+  {
+    border-color: #edf1f4;
+  }
+  .background2 {
+    color: var(--color-chartreuse);
+  }
+  .textandupload {
+    position: absolute;
+    top: 300px;
+    left: 90px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .mdetext
+  {
+    position: absolute;
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    top: 30px;
+    left: 1030px;
+    right: 112px;
+    font-size: large;
+    color: #000;
+  }
+  .dark .mdetext
+  {
+    color: #edf1f4;
+  }*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 2s;
+}
+.dark
+{
+    background: #282c2f;
+    transition: 2s;
+}
+.Calculator
+{
+    position: relative;
+    width: 340px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.1),
+    -15px -15px 20px #fffb;
+    background-color: #f7f9f7;
+    transition: 2s;
+}
+.dark .Calculator
+{
+    background: #33393e;
+    background-color: #33393e;
+    box-shadow: 6;
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.25),
+    -15px -15px 20px rgba(255,255,255,0.1);
+    transition: 2s;
+}
+.Calculator .buttons
+{
+    position: relative;
+    display: grid;
+}
+.Calculator .buttons #value
+{
+    position: relative;
+    grid-column: span 4;
+    user-select: none;
+    width: 100%;
+    text-align: end;
+    color: #5166d6;
+    height: 100px;
+    line-height: 100px;
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
+    inset -5px -5px 20px #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+    font-size: 2em;
+    font-weight: 500;
+}
+.dark .Calculator .buttons #value
+{
+    color: #eee;
+    box-shadow: inset 15px 15px 20px rgba(0,0,0,0.5),
+    inset -15px -15px 20px rgba(255,255,255,0.1);
+}
+.Calculator .buttons span
+{
+    position: relative;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+    -5px -5px 20px #fff;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #666;
+    border: 2px solid #edf1f4;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+    -5px -5px 10px #fff;
+    border-radius: 10px;
+}
+.dark .Calculator .buttons span{
+    color: #eee;
+    border: 2px solid #333;
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.5),
+    -15px -15px 20px rgba(255,255,255,0.1);
+}
+.Calculator .buttons span:active
+{
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
+    inset -5px -5px 10px #fff;
+    color: #f44336;
+}
+.dark .Calculator .buttons span:active{
+    box-shadow: inset 15px 15px 20px rgba(0,0,0,0.5),
+    inset -15px -15px 20px rgba(255,255,255,0.1);
+}
+.Calculator .buttons span#clear
+{
+    grid-column: span 2;
+    background: #f44336;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.Calculator .buttons span#plus{
+    grid-row: span 2;
+    background: #31a935;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.Calculator .buttons span#equal{
+    grid-row: span 2;
+    background: #2196f3;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.dark .Calculator .buttons span#clear,
+.dark .Calculator .buttons span#plus,
+.dark .Calculator .buttons span#equal
+{
+    border: 2px solid #333;
+}
+.dark .Calculator .buttons span#clear:active,
+.dark .Calculator .buttons span#plus:active,
+.dark .Calculator .buttons span#equal:active
+{
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1);
+}
+.Calculator .buttons span#clear:active,
+.Calculator .buttons span#plus:active,
+.Calculator .buttons span#equal:active
+{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+    -5px -5px 10px #fff,
+    inset 5px 5px 10pxx rgba(0,0,0,0.1);
+}
+.toggleBtn
+{
+    position: fixed;
+    top: 20px;
+    right: 80px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+    border: 2px solid #edf1f4;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+    -5px -5px 10px #fff;
+}
+.dark .toggleBtn
+{
+    background-color: #edf1f4;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25),
+    -5px -5px 10px rgba(255,255,255,0.25);
+}
+.want-to-see-container {
+    width: 408px;
+    height: 84px;
+    color: #000;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.dark .want-to-see-container
+{
+    color: #edf1f4;
+}
+.upload-button {
+    display: inline-flex;
+    padding: 9px 17px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    background: #61FF00;
+    border-color: #000;
+  }
+  .dark .upload-button
+  {
+    border-color: #edf1f4;
   }
   .background2 {
     color: var(--color-chartreuse);
